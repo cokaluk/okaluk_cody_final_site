@@ -1,10 +1,11 @@
-# Get the list of staged files (only .js, .ts, .tsx, .jsx)
 STAGED_FILES=$(git diff --cached --name-only --diff-filter=AM | grep -E '.(js|ts|tsx|jsx)$')
-
-# Run Jest tests on the related files only
 if [ -n "$STAGED_FILES" ]; then
-  npx jest --bail --findRelatedTests $STAGED_FILES
-  if [ $? -ne 0 ]; then
+  # Run Jest only if there are staged files
+  TEST_RESULTS=$(npx jest --bail --findRelatedTests $STAGED_FILES)
+  TEST_EXIT_CODE=$?
+
+  # If Jest fails and there are no tests, allow commit
+  if [ $TEST_EXIT_CODE -ne 0 ] && ! echo "$TEST_RESULTS" | grep -q "No tests found"; then
     echo "Jest tests failed. Aborting commit."
     exit 1
   fi
