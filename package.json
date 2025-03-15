@@ -12,7 +12,15 @@
     "build-storybook": "storybook build",
     "test-storybook": "storybook test"
   },
+  "husky": {
+    "hooks": {
+      "applypatch-msg":"echo \"[Husky] applypatch-msg\"",
+      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+      "pre-commit": "echo \"[Husky] pre-commit\""
+    }
+  },
   "dependencies": {
+    "husky": "^9.1.7",
     "react-dom": "^19.0.0",
     "styled-components": "^6.1.15"
   },
