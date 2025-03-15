@@ -45,6 +45,7 @@ export interface CardProps {
   title: string;
   description: string;
   backgroundColor?: string;
+  // comment just to trigger a test
   image?: string;
   footer?: string;
   disabled?: boolean;

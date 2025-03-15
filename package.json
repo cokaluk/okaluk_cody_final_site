@@ -2,7 +2,6 @@
   "name": "okaluk_cody_ui_garden",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -38,6 +37,7 @@
     "styled-components": "^6.1.15"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.26.3",
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
@@ -59,6 +59,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/browser": "^3.0.7",
     "@vitest/coverage-v8": "^3.0.7",
+    "babel-jest": "^29.7.0",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
@@ -82,18 +83,5 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "testMatch": [
-      "<rootDir>/src/**/*.tests.tsx",
-      "<rootDir>/src/**/*.spec.tsx"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "babel-jest"
-    }
   }
 }

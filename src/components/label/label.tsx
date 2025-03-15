@@ -18,6 +18,7 @@ const StyledLabel = styled.label<{
 
 export interface LabelProps {
   disabled?: boolean;
+  // comment to trigger jest test
   backgroundColor?: string;
   text: string;
 }
