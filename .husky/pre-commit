@@ -1,5 +1,7 @@
 STAGED_FILES=$(git diff --cached --name-only --diff-filter=AM | grep -E '.(js|ts|tsx|jsx)$')
 if [ -n "$STAGED_FILES" ]; then
+
+  npx lint-staged
   # Run Jest only if there are staged files
   TEST_RESULTS=$(npx jest --bail --findRelatedTests $STAGED_FILES)
   TEST_EXIT_CODE=$?
