@@ -14,9 +14,9 @@
   },
   "husky": {
     "hooks": {
-      "applypatch-msg":"echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "pre-commit": "echo \"[Husky] pre-commit\""
+      "applypatch-msg":"echo [Husky] applypatch-msg",
+      "pre-applypatch": "echo [Husky] pre-applypatch",
+      "pre-commit": "echo [Husky] pre-commit"
     }
   },
   "dependencies": {
