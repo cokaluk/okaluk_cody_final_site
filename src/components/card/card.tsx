@@ -36,8 +36,8 @@ const CardDescription = styled.p`
 
 const CardFooter = styled.div`
   padding: 8px  16px;
-  background-color:     #f7f7f7;
-  text-align;       right;
+  background-color: #f7f7f7;
+  text-align: right;
   font-size: 0.9rem;
 `;
 
