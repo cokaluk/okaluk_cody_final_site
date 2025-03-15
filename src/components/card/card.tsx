@@ -1,13 +1,17 @@
 import styled from "styled-components";
-import React from 'react';
+import React from "react";
 
-const CardContainer = styled.div.attrs({ role: "article" })<{ disabled?: boolean; backgroundColor?: string  }>`
-  background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
+const CardContainer = styled.div.attrs({ role: "article" })<{
+  disabled?: boolean;
+  backgroundColor?: string;
+}>`
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor || "transparent"};
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  cursor: ${({ disabled }) => ( disabled ? 'not-allowed' : 'pointer' )};
-  opacity: ${({ disabled }) => ( disabled ? 0.5 : 1.0 )};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1.0)};
 `;
 
 const CardImage = styled.img`
@@ -31,9 +35,9 @@ const CardDescription = styled.p`
 `;
 
 const CardFooter = styled.div`
-  padding: 8px 16px;
-  background-color: #f7f7f7;
-  text-align; right;
+  padding: 8px  16px;
+  background-color:     #f7f7f7;
+  text-align;       right;
   font-size: 0.9rem;
 `;
 
@@ -46,14 +50,13 @@ export interface CardProps {
   disabled?: boolean;
 }
 
-
 export const Card = ({
   title,
   description,
   backgroundColor,
   image,
   footer,
-  disabled = false
+  disabled = false,
 }: CardProps) => {
   return (
     <CardContainer disabled={disabled} backgroundColor={backgroundColor}>

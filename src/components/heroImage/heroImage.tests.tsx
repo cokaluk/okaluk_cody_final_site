@@ -13,7 +13,13 @@ test("renders the hero image and is visible", () => {
 });
 
 test("applies 0.5 opacity when disabled", () => {
-  render(<HeroImage backgroundImage="test-image.jpg" heading="Disabled Hero" disabled />);
+  render(
+    <HeroImage
+      backgroundImage="test-image.jpg"
+      heading="Disabled Hero"
+      disabled
+    />,
+  );
 
   const hero = screen.getByRole("banner");
 

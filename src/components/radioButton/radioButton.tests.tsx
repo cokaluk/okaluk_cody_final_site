@@ -13,7 +13,14 @@ test("renders the radio button and is visible", () => {
 });
 
 test("applies 0.5 opacity when disabled", () => {
-  render(<RadioButton label="Disabled Radio" name="radioGroup" value="test" disabled />);
+  render(
+    <RadioButton
+      label="Disabled Radio"
+      name="radioGroup"
+      value="test"
+      disabled
+    />,
+  );
 
   const label = screen.getByText("Disabled Radio");
 

@@ -1,7 +1,7 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import { TableHeader } from './tableHeader';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import { TableHeader } from "./tableHeader";
 
 test("renders the table header and is visible", () => {
   render(
@@ -11,7 +11,7 @@ test("renders the table header and is visible", () => {
           <TableHeader text="Header" />
         </tr>
       </thead>
-    </table>
+    </table>,
   );
 
   const header = screen.getByText("Header");
@@ -28,7 +28,7 @@ test("applies 0.5 opacity when disabled", () => {
           <TableHeader text="Header" disabled />
         </tr>
       </thead>
-    </table>
+    </table>,
   );
 
   const header = screen.getByText("Header");

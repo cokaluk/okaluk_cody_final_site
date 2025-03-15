@@ -6,21 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "storybook test"
-  },
-  "husky": {
-    "hooks": {
-      "applypatch-msg":"echo [Husky] applypatch-msg",
-      "pre-applypatch": "echo [Husky] pre-applypatch",
-      "pre-commit": "echo [Husky] pre-commit"
-    }
+    "test-storybook": "storybook test",
+    "prepare": "husky"
   },
   "dependencies": {
-    "husky": "^9.1.7",
     "react-dom": "^19.0.0",
     "styled-components": "^6.1.15"
   },
@@ -51,9 +45,11 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-storybook": "^0.11.3",
     "globals": "^15.15.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "playwright": "^1.50.1",
+    "prettier": "^3.5.3",
     "react": "^19.0.0",
     "storybook": "8.6.3",
     "ts-jest": "^29.2.6",

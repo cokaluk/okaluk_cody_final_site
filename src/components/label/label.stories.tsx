@@ -1,20 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Label } from './label';
+import { Label } from "./label";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: 'Example/Label',
+  title: "Example/Label",
   component: Label,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
+    layout: "centered",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: { control: "color" },
   },
 } satisfies Meta<typeof Label>;
 
@@ -24,13 +24,13 @@ type Story = StoryObj<typeof meta>;
 export const Disabled: Story = {
   args: {
     disabled: true,
-    text: 'Label',
+    text: "Label",
   },
 };
 
 export const Enabled: Story = {
   args: {
     disabled: false,
-    text: 'Label',
+    text: "Label",
   },
 };

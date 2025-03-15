@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import React from 'react';
+import styled from "styled-components";
+import React from "react";
 
 export interface ButtonProps {
   disabled?: boolean;
@@ -8,7 +8,8 @@ export interface ButtonProps {
 }
 
 const StyledButton = styled.button<{ backgroundColor?: string }>`
-  background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor || "transparent"};
   border: none;
   padding: 10px 16px;
   font-size: 16px;
@@ -21,7 +22,6 @@ const StyledButton = styled.button<{ backgroundColor?: string }>`
   }
 `;
 
-
 export const Button = ({
   disabled = false,
   backgroundColor,
@@ -29,10 +29,13 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-      <StyledButton type="button" backgroundColor={backgroundColor} disabled={disabled} {...props}>
-        {text}
-        </StyledButton>
+    <StyledButton
+      type="button"
+      backgroundColor={backgroundColor}
+      disabled={disabled}
+      {...props}
+    >
+      {text}
+    </StyledButton>
   );
 };
-
-

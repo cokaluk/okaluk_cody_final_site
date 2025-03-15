@@ -13,7 +13,9 @@ test("renders the card and is visible", () => {
 });
 
 test("applies 0.5 opacity when disabled", () => {
-  render(<Card title="Disabled Card" description="This card is disabled" disabled />);
+  render(
+    <Card title="Disabled Card" description="This card is disabled" disabled />,
+  );
 
   const card = screen.getByRole("article");
 

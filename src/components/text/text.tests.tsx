@@ -1,7 +1,7 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import { Text } from './text'; // Adjust the import path to where your Text component is
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import { Text } from "./text"; // Adjust the import path to where your Text component is
 
 test("renders the text and is visible", () => {
   render(<Text text="Test Text" />);

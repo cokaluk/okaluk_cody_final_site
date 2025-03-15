@@ -1,19 +1,19 @@
 import styled from "styled-components";
 import React from "react";
 
-const StyledLabel = styled.label <{ disabled?: boolean }>`
+const StyledLabel = styled.label<{ disabled?: boolean }>`
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer' )};
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1.0 )};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1.0)};
   user-select: none;
 `;
 
 const StyledInput = styled.input`
   accent-color: black;
   cursor: inherit;
-`
+`;
 
 export interface RadioButtonProps {
   label: string;
@@ -22,7 +22,6 @@ export interface RadioButtonProps {
   disabled?: boolean;
   checked?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-
 }
 
 export const RadioButton = ({
@@ -31,7 +30,7 @@ export const RadioButton = ({
   value,
   disabled = false,
   checked,
-  onChange
+  onChange,
 }: RadioButtonProps) => {
   return (
     <StyledLabel disabled={disabled}>
@@ -41,7 +40,8 @@ export const RadioButton = ({
         value={value}
         disabled={disabled}
         checked={checked}
-        onChange={onChange}/>
+        onChange={onChange}
+      />
       {label}
     </StyledLabel>
   );
