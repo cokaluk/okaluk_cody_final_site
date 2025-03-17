@@ -13,7 +13,8 @@ const StyledText = styled.span<{
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1.0)};
   user-select: ${({ disabled }) => (disabled ? "none" : "auto")};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "auto")};
-`;
+`
+// comment to test git staging
 
 export interface TextProps {
   color?: string;
