@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// @ts-ignore
 import React from "react";
 
 const StyledLabel = styled.label<{ disabled?: boolean }>`

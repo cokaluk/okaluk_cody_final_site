@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// @ts-ignore
 import React from "react";
 
 export interface ButtonProps {

@@ -14,18 +14,18 @@
 
 # open a terminal in the directory you wish to clone the files to and type
 
-5. git clone https://github.com/cokaluk/okaluk_cody_ui_garden_build_checks.git
+5. git clone https://github.com/cokaluk/okaluk_cody_final_site.git
 
 # then navigate into the project directory
 
-6. cd okaluk_cody_ui_garden_build_checks
+6. cd okaluk_cody_final_site
 
 # build the image
 
-docker build -t okaluk_cody_ui_garden_build_checks .
+docker build -t okaluk_cody_final_site .
 
 # create the container
 
-docker run --name okaluk_cody_coding_assignment13 -dp 8018:80 okaluk_cody_ui_garden_build_checks
+docker run --name okaluk_cody_coding_assignment14 -dp 5575:80 okaluk_cody_final_site
 
 # storybook should now be up and running on http://localhost:8018/
