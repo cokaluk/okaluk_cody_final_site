@@ -7,9 +7,11 @@ const HeroContainer = styled.section.attrs({ role: "banner" })<{
   height?: string;
   disabled?: boolean;
 }>`
-width: 100vw;
+margin: 0;
+padding: 0;
+width: 100%;
 overflow: hidden;
-height: ${({ height }) => height || "500px"};
+height: ${({ height }) => height || "100vh"};
 background-image: url(${({ backgroundImage }) => backgroundImage});
 background-size: cover;
 background-position: center;

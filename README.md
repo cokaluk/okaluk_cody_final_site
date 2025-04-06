@@ -28,4 +28,4 @@ docker build -t okaluk_cody_final_site .
 
 docker run --name okaluk_cody_coding_assignment14 -dp 5575:80 okaluk_cody_final_site
 
-# storybook should now be up and running on http://localhost:8018/
+# storybook should now be up and running on http://localhost:5575/

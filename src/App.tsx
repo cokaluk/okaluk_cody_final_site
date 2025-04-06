@@ -1,33 +1,45 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { HeroImage } from './components';
+import heroImg from './assets/heroimage.jpg';
+import { Card } from './components';
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <HeroImage
+        backgroundImage={heroImg}
+        heading="Cody Okaluk Portfolio"
+        subheading="Full Stack Web Developer"
+      />
+      <h2>Projects</h2>
+      <Card
+        title="Pokemon Content Management System"
+        description="A Pokemon Content Management System built with PHP and SQLite allowing users to manage a virtual Pokedex."
+      />
+      <Card
+        title="E-commerce Website"
+        description="
+          An E-commerce website, built with Ruby on Rails and SQLite allowing users to create accounts, search for and purchase products, factoring in taxes from users selected province/territory and using stripe to handle payments."
+      />
+      <h2>skills</h2>
+      <Card
+        title="Programming"
+        description="Experience with Python, Ruby, PHP, Java and Javascript creating fast and efficient Programs and Websites."
+      />
+      <Card
+        title="SQL"
+        description="experience working with SQLite and PostGreSQL, normalizing databases and optimizing tables for the most popular queries being run."
+      />
+      <Card
+        title="Resources"
+        description="w3schools, great website for refreshing any programming knowledge."
+      />
+      <Card
+        title="Developer Setup"
+        description="I use VsCode."
+      />
     </>
   );
 }

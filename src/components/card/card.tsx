@@ -11,6 +11,13 @@ const CardContainer = styled.div.attrs({ role: "article" })<{
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 40vw;
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #333;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1.0)};
 `;
@@ -46,7 +53,6 @@ export interface CardProps {
   title: string;
   description: string;
   backgroundColor?: string;
-  // comment just to trigger a test
   image?: string;
   footer?: string;
   disabled?: boolean;
